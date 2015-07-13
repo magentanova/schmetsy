@@ -9,14 +9,24 @@
 
 <body>
     <div class="container">
-<p>
-/-------\<br>
-&nbsp I &nbsp&nbsp&nbsp&nbsp  I<br>
-&nbsp I &nbsp&nbsp&nbsp&nbsp  I<br>
-&nbsp I &nbsp&nbsp&nbsp&nbsp  I<br>
-&nbsp -----<br>&nbsp
-</p>
-</div>
+		<div class="inputs">
+			<div id="threePics">
+				<input name="threePics" type="checkbox">
+				<label for="threePics">has at least 3 photos</label>
+			</div>
+			<input type="text" placeholder="browse for banal artisanal pap by keyword">
+			<div id="lastWeek">
+			    <input name="lastWeek" type="checkbox">
+				<label for="lastWeek">came out within the last week</label>
+		    </div>
+		    <div id="onSale">
+				<input id="saleCheck" name="onSale" type="checkbox">
+				<label for="onSale">on sale</label>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-row">
+	</div>
     <script type="text/javascript" src="./dist/app-browserify.js"></script>
 </body>
 

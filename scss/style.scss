@@ -16,6 +16,8 @@
  * GRIDS
  */
 
+ $width:800;
+
 .grid {
     display: flex;
     flex-direction: row;
@@ -89,8 +91,221 @@
  * GENERAL
  */
 
+$borderColor: #FF9933;
+$leftArrow: "\2039";
+$rightArrow: "\203A";
+
+body {
+    background-image: url('../img/background-texture.jpg');
+}
+
 img {
     max-width: 100%;
+}
+
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    text-align: center;
+}
+
+.bottom-row {
+    display: inline-block;
+    overflow: scroll;
+    white-space: nowrap;
+    left: -25%;
+    position: absolute;
+
+    img.target {
+        border: 8px solid $borderColor;
+        vertical-align: sub;
+    }
+}
+
+.container {
+    font-size: medium;
+    text-align: center;
+    transition: .5s ease;
+    max-width: 855px;
+    position: relative;
+    margin: auto;
+
+    .inputs {
+        font-size: 13px;
+
+        @media screen and (min-width: 800px){
+
+            > *{
+                position: absolute;
+            }
+
+            #threePics{
+                display: block;
+                left: 2rem;
+                top: -1rem;
+            }
+
+            #onSale{
+                display: block;
+                right: 8rem;
+                top: -2rem;
+            }
+
+            #lastWeek{
+                display: block;
+                left: 2rem;
+                top: -2rem;
+            }
+
+            input[type="text"] {
+                width: 19rem;
+                padding: .5rem;
+                top: 1rem;
+                left: 50%;
+                transform: translate(-50%,-135%);
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 799px){
+
+            display: block;
+
+            > * {
+                display: block;
+            }
+
+            input {
+                display: inline-block;
+                position: static;   
+            }
+        }
+
+    }
+
+    .thumb-grid {
+        margin: 3rem auto;
+        max-width:850px;
+        font-size: 0;
+        position: relative;
+
+        .thumb {
+
+            @media screen and (min-width: 600px){
+                display: inline-block;
+                width: 20%;
+                padding: 2%;
+            }
+
+            @media screen and (max-width: 599px){
+                display: block;
+                margin:10px;
+
+                h1 {
+                    font-size:12px;
+                }
+            }
+
+            img {
+                border: 2px solid #666;
+            }
+        }
+    }
+
+    .detail-view {
+        max-width: 450px;
+        margin: 2rem auto;
+        font-size: 0;
+        position:relative;
+        z-index: 2;
+
+        a.nav-arrow {
+          position: absolute;
+          font-size: 400px;
+          text-align: inherit;
+          text-decoration: none;
+          line-height: 1;
+          cursor: pointer;
+          top: 22%;
+        }
+
+        a.nav-arrow.left{
+            left:-33%;
+        }
+
+        a.nav-arrow.right{
+            right:-33%;
+        }
+
+        h1 {
+            font-size: 18px;
+            width: 75%;
+            margin: auto;
+            border: 3px solid $borderColor;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 0;
+            padding: 1rem;
+            background-color: white;
+        }
+
+        img {
+            border: 2px solid $borderColor;
+            width: 100%;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        span {
+            display: block;
+            padding: .5rem;   
+        }
+
+        span:first-child{
+            border-bottom: 1px solid $borderColor;
+        }
+
+        .tag {
+            display: block;
+            border: 2px solid $borderColor;
+            position: absolute;
+            background-color: #FFCC66;
+            font-size: 18px;
+        }
+
+        .description {
+            font-size: 10px;
+            bottom: 0;
+            transform: translateY(100%);
+            margin: 0;
+            border-top:0;
+            width:90%;  
+            right:5%;
+            padding: .5rem;
+        }
+
+        .viewsNfaves {
+            left:0;
+            transform: translate(-100%);
+            bottom:10%;
+            border-right:0;
+        }
+
+        .price {
+            right:0;
+            transform: translate(100%);
+            top:35%;
+            border-left:0;
+            padding: .5rem;
+        }
+
+
+    }
+}
+
+.container > * {
+    font-size: medium;
 }
 /**
  * YOUR CODE HERE
